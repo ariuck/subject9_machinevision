@@ -1,0 +1,7 @@
+﻿file,role,expected,decision,correct,largest_red_area_ratio,valid_count,center_x_norm,center_y_norm,reason
+ok_01.jpg,reference,OK,OK,True,0.004948,1,0.473,0.2,
+ng_01.jpg,reference,NG,NG,True,0.0,0,,,NG_RED_CAP_MISSING
+ok_02.jpg,test,OK,OK,True,0.005202,2,0.493,0.207,
+ng_02.jpg,test,NG,NG,True,0.0,0,,,NG_RED_CAP_MISSING
+ok_03.jpg,test,OK,OK,True,0.006927,4,0.469,0.199,
+ng_03.jpg,test,NG,NG,True,0.0,0,,,NG_RED_CAP_MISSING
