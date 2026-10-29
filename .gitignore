@@ -1,0 +1,36 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+data/
+samples/
+
+# 실행 결과
+outputs/
+
+# Mini Challenge 원본 이미지(용량이 큼)
+roi_temp/*.jpg
+
+# 모델
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# 영상
+*.mp4
+*.avi
+*.mov
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 환경설정
+.env
