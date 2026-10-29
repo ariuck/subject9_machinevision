@@ -171,7 +171,61 @@ python -m uvicorn src.fastapi_cap_app:app --host 127.0.0.1 --port 8000
 
 ---
 
+## Day 04 — Template · Feature Matching
+
+### 학습 내용
+
+광천김 포장지의 로고 영역(KC 로고 + (주)광천김 + 영문)을 기준으로 다음 방법을 실습했다.
+
+- GrabCut, MeanShift (별도 실험)
+- Template Matching, ORB, SIFT, RANSAC + Homography
+
+### 주요 파일
+
+| 파일 | 역할 |
+|---|---|
+| `24_day04_prepare.py` | 로고 Template과 normal / shift / rot15 / scale90 Target 생성 |
+| `25_grabcut.py` | 사각형 초기값에 따른 전경·배경 분리 비교 |
+| `26_meanshift.py` | `sp`, `sr`에 따른 색상 단순화와 처리 시간 비교 |
+| `27_template_matching.py` | Template Score와 위치 측정 |
+| `28_orb_matching.py` | ORB Good Match 측정 |
+| `29_sift_matching.py` | SIFT Good Match 측정 |
+| `30_homography.py` | SIFT + RANSAC으로 로고 위치를 사각형으로 추정 |
+| `31_day04_compare.py` | 네 방법의 측정값 통합 |
+| `32_day04_challenge.py` | Mini Challenge: 실제 촬영 이미지에 SIFT + Homography 적용 |
+
+### 주요 결과
+
+| 조건 | Template Score | ORB Good | SIFT Good | Homography Inlier |
+|---|---:|---:|---:|---:|
+| normal | 0.9997 | 276 | 615 | 610 |
+| shift | 0.4534 | 245 | 596 | 594 |
+| rot15 | 0.4750 | 232 | 458 | 447 |
+| scale90 | 0.6240 | 156 | 413 | 402 |
+
+- Template Matching: 기준 상태에서는 잘 찾았지만, shift·rot15에서 다른 위치를 찾았다. shift는 로고가 이미지 아래 끝에 있어 이동하면 일부가 잘린 것이 원인이다.
+- ORB: 가장 빠르지만(13~22ms) 크기 변화에서 Match가 가장 많이 줄었다.
+- SIFT: 회전·크기 변화에서도 Match가 가장 많이 유지되었다.
+- SIFT + Homography: 네 조건 모두 로고 위치를 사각형으로 찾았다(Inlier 비율 0.97 이상).
+
+### Mini Challenge
+
+실제 다시 촬영한 4장(shift / rotate / distance / tilt_glare)에 SIFT + Homography를 적용해 4장 모두 로고 영역을 찾았다.
+`distance.jpg`는 Template보다 작아 Template Matching을 쓸 수 없었고, `tilt_glare.jpg`는 반사 때문에 Inlier 비율이 0.72로 가장 낮았다.
+
+### 주요 결과 파일
+
+- `reports/day04_template_results.csv`
+- `reports/day04_orb_results.csv`
+- `reports/day04_sift_results.csv`
+- `reports/day04_homography_results.csv`
+- `reports/day04_rotation_compare.csv`
+- `reports/day04_challenge_results.csv`
+- `reports/day04_method_selection.md`
+
+---
+
 ## 다음 학습
 
-Day 04에서는 객체 분리, Template Matching, 특징점 매칭으로
-위치가 바뀌어도 검사 대상을 찾는 방법을 학습한다.
+Day 05에서는 Calibration으로 OK / NG 기준값을 정하고,
+여러 Feature를 조합한 복합 Rule과 Test 실패 분석을 학습한다.
