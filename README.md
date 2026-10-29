@@ -225,7 +225,75 @@ python -m uvicorn src.fastapi_cap_app:app --host 127.0.0.1 --port 8000
 
 ---
 
-## 다음 학습
+## Day 05 — Calibration · Rule Freeze · Test
 
-Day 05에서는 Calibration으로 OK / NG 기준값을 정하고,
-여러 Feature를 조합한 복합 Rule과 Test 실패 분석을 학습한다.
+### 검사 대상
+
+광천김 포장지의 기준 로고 존재 및 정합 검사 (로고 일부를 가린 사진이 NG)
+
+### 사용한 기술
+
+- Template Matching, SIFT, RANSAC, Homography (`src/day05_logo_features.py` 공통 함수)
+
+### 주요 파일
+
+| 파일 | 역할 |
+|---|---|
+| `day05_logo_features.py` | Template · SIFT · Homography 측정 공통 함수 |
+| `33_day05_check_features.py` | 대표 이미지 1장으로 공통 함수 확인 |
+| `34_day05_measure_calibration.py` | Calibration 12장 측정 → CSV |
+| `35_day05_analyze_calibration.py` | OK / NG 분포 그래프와 Threshold 후보 탐색 |
+| `36_day05_freeze_rule.py` | Rule을 `configs/day05_logo_rules.json`으로 고정 |
+| `37_day05_test.py` | 처음 보는 Test 6장에 Rule 적용 |
+| `38_day05_evaluate.py` | TP · TN · FP · FN, FP / FN 이미지 분리 |
+| `39_day05_mini_challenge.py` | 다른 제품용 Mini Challenge (사진만 넣으면 실행) |
+
+### Calibration
+
+- OK 6장, NG 6장 (실제 이미지 크기 1280×960)
+- 측정값: Template Score, SIFT Good Match, Homography Inlier, Inlier Ratio
+- Template Score는 OK / NG가 거의 겹쳐 구분에 쓸 수 없었다.
+
+### Baseline Rule
+
+- Version: day05-logo-v1.0
+- Homography Found: True
+- SIFT Good Match >= 129
+- Inlier Ratio >= 0.8664
+- Calibration: Accuracy 0.9167, FP 1 (`ok_06`), FN 0 — 교재 36번의 기준값과 같은 결과
+
+### Test
+
+- Test 이미지: 6장
+- Accuracy: 0.50
+- TP: 3, TN: 0, FP: 3, FN: 0
+- NG Precision: 0.50, NG Recall: 1.00
+
+### Test 실패 분석
+
+- FP: 3, FN: 0
+- 공통 NG Reason: `LOW_INLIER_RATIO` (정상 3장의 Inlier Ratio 0.78~0.85)
+- 실패한 정상 이미지에서도 로고 위치는 정확히 찾았다. Inlier Ratio가 Calibration에서 OK / NG가 많이 겹친 Feature였고, 기준이 그 겹친 구간에 걸려 있었다.
+- Test 결과를 보고 Threshold를 다시 맞추지 않고 현재 Baseline의 한계로 기록했다.
+
+### Mini Challenge
+
+- `39_day05_mini_challenge.py`를 완성했다. Feature 2개 조합과 Threshold를 Calibration 측정값으로 자동 결정 → JSON 고정 → Test → TP / TN / FP / FN.
+- 다른 제품 사진이 없어 실제 Mini Challenge는 아직 하지 않았다. `samples/day05/mini_challenge/`에 사진을 넣고 실행한다.
+
+### 핵심 결과 파일
+
+- `reports/day05_calibration_measurements.csv`
+- `reports/day05_rule_candidates.csv`
+- `configs/day05_logo_rules.json`
+- `reports/day05_test_results.csv`
+- `reports/day05_test_metrics.md`
+- `reports/day05_analysis.md`
+
+### 오늘의 핵심
+
+Calibration 데이터로 판정 기준을 결정하고,
+기준을 동결한 뒤 처음 보는 Test 데이터에 적용했다.
+
+Test 결과에서는 Accuracy뿐 아니라 FP와 FN을 확인했고,
+FP 3건의 공통 NG Reason을 분석하여 현재 Baseline의 한계를 확인했다.
