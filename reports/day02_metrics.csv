@@ -1,0 +1,306 @@
+﻿stage,item,metric,value
+reference,,shape,"[198, 213, 3]"
+reference,,mean,89.4
+reference,,std,71.8
+reference,,min,1
+reference,,max,232
+reference,,p2,23
+reference,,p98,202
+reference,,sat255_pct,0.0
+reference,,dark5_pct,0.0
+color,gray,mean,89.4
+color,gray,std,71.8
+color,gray,min,1
+color,gray,max,232
+color,gray,p2,23
+color,gray,p98,202
+color,gray,sat255_pct,0.0
+color,gray,dark5_pct,0.0
+color,H,mean,98.2
+color,H,std,50.9
+color,S,mean,41.1
+color,S,std,37.9
+color,S,max,255
+color,V,mean,94.1
+color,V,std,70.0
+color,,V_vs_gray_absdiff_mean,4.8
+brightness,dark.jpg,mean,49.1
+brightness,dark.jpg,std,39.6
+brightness,dark.jpg,min,0
+brightness,dark.jpg,max,135
+brightness,dark.jpg,p2,12
+brightness,dark.jpg,p98,111
+brightness,dark.jpg,sat255_pct,0.0
+brightness,dark.jpg,dark5_pct,0.1
+brightness,alpha_1.0_beta_0,mean,49.1
+brightness,alpha_1.0_beta_0,std,39.6
+brightness,alpha_1.0_beta_0,min,0
+brightness,alpha_1.0_beta_0,max,135
+brightness,alpha_1.0_beta_0,p2,12
+brightness,alpha_1.0_beta_0,p98,111
+brightness,alpha_1.0_beta_0,sat255_pct,0.0
+brightness,alpha_1.0_beta_0,dark5_pct,0.1
+brightness,alpha_1.0_beta_20,mean,69.1
+brightness,alpha_1.0_beta_20,std,39.6
+brightness,alpha_1.0_beta_20,min,19
+brightness,alpha_1.0_beta_20,max,155
+brightness,alpha_1.0_beta_20,p2,32
+brightness,alpha_1.0_beta_20,p98,131
+brightness,alpha_1.0_beta_20,sat255_pct,0.0
+brightness,alpha_1.0_beta_20,dark5_pct,0.0
+brightness,alpha_1.0_beta_50,mean,99.1
+brightness,alpha_1.0_beta_50,std,39.6
+brightness,alpha_1.0_beta_50,min,49
+brightness,alpha_1.0_beta_50,max,185
+brightness,alpha_1.0_beta_50,p2,62
+brightness,alpha_1.0_beta_50,p98,161
+brightness,alpha_1.0_beta_50,sat255_pct,0.0
+brightness,alpha_1.0_beta_50,dark5_pct,0.0
+brightness,alpha_1.0_beta_80,mean,129.1
+brightness,alpha_1.0_beta_80,std,39.6
+brightness,alpha_1.0_beta_80,min,79
+brightness,alpha_1.0_beta_80,max,215
+brightness,alpha_1.0_beta_80,p2,92
+brightness,alpha_1.0_beta_80,p98,191
+brightness,alpha_1.0_beta_80,sat255_pct,0.0
+brightness,alpha_1.0_beta_80,dark5_pct,0.0
+gamma,gamma_0.6,mean,21.6
+gamma,gamma_0.6,std,24.9
+gamma,gamma_0.6,min,0
+gamma,gamma_0.6,max,87
+gamma,gamma_0.6,p2,1
+gamma,gamma_0.6,p98,64
+gamma,gamma_0.6,sat255_pct,0.0
+gamma,gamma_0.6,dark5_pct,54.1
+gamma,gamma_0.8,mean,35.3
+gamma,gamma_0.8,std,34.1
+gamma,gamma_0.8,min,0
+gamma,gamma_0.8,max,115
+gamma,gamma_0.8,p2,5
+gamma,gamma_0.8,p98,90
+gamma,gamma_0.8,sat255_pct,0.0
+gamma,gamma_0.8,dark5_pct,3.0
+gamma,gamma_1.0,mean,49.1
+gamma,gamma_1.0,std,39.6
+gamma,gamma_1.0,min,0
+gamma,gamma_1.0,max,135
+gamma,gamma_1.0,p2,12
+gamma,gamma_1.0,p98,111
+gamma,gamma_1.0,sat255_pct,0.0
+gamma,gamma_1.0,dark5_pct,0.1
+gamma,gamma_1.2,mean,61.0
+gamma,gamma_1.2,std,42.9
+gamma,gamma_1.2,min,1
+gamma,gamma_1.2,max,152
+gamma,gamma_1.2,p2,20
+gamma,gamma_1.2,p98,128
+gamma,gamma_1.2,sat255_pct,0.0
+gamma,gamma_1.2,dark5_pct,0.0
+gamma,gamma_1.5,mean,78.2
+gamma,gamma_1.5,std,45.0
+gamma,gamma_1.5,min,2
+gamma,gamma_1.5,max,169
+gamma,gamma_1.5,p2,33
+gamma,gamma_1.5,p98,146
+gamma,gamma_1.5,sat255_pct,0.0
+gamma,gamma_1.5,dark5_pct,0.0
+gamma,gamma_2.0,mean,101.8
+gamma,gamma_2.0,std,44.6
+gamma,gamma_2.0,min,5
+gamma,gamma_2.0,max,189
+gamma,gamma_2.0,p2,55
+gamma,gamma_2.0,p98,168
+gamma,gamma_2.0,sat255_pct,0.0
+gamma,gamma_2.0,dark5_pct,0.0
+clahe,reference_gray,mean,89.4
+clahe,reference_gray,std,71.8
+clahe,reference_gray,min,1
+clahe,reference_gray,max,232
+clahe,reference_gray,p2,23
+clahe,reference_gray,p98,202
+clahe,reference_gray,sat255_pct,0.0
+clahe,reference_gray,dark5_pct,0.0
+clahe,low_contrast_gray,mean,111.2
+clahe,low_contrast_gray,std,25.2
+clahe,low_contrast_gray,min,80
+clahe,low_contrast_gray,max,162
+clahe,low_contrast_gray,p2,88
+clahe,low_contrast_gray,p98,151
+clahe,low_contrast_gray,sat255_pct,0.0
+clahe,low_contrast_gray,dark5_pct,0.0
+clahe,clahe_clip_1.0,mean,119.8
+clahe,clahe_clip_1.0,std,28.1
+clahe,clahe_clip_1.0,min,72
+clahe,clahe_clip_1.0,max,181
+clahe,clahe_clip_1.0,p2,86
+clahe,clahe_clip_1.0,p98,169
+clahe,clahe_clip_1.0,sat255_pct,0.0
+clahe,clahe_clip_1.0,dark5_pct,0.0
+clahe,clahe_clip_2.0,mean,122.6
+clahe,clahe_clip_2.0,std,34.0
+clahe,clahe_clip_2.0,min,55
+clahe,clahe_clip_2.0,max,209
+clahe,clahe_clip_2.0,p2,79
+clahe,clahe_clip_2.0,p98,187
+clahe,clahe_clip_2.0,sat255_pct,0.0
+clahe,clahe_clip_2.0,dark5_pct,0.0
+clahe,clahe_clip_3.0,mean,122.0
+clahe,clahe_clip_3.0,std,38.3
+clahe,clahe_clip_3.0,min,44
+clahe,clahe_clip_3.0,max,218
+clahe,clahe_clip_3.0,p2,75
+clahe,clahe_clip_3.0,p98,196
+clahe,clahe_clip_3.0,sat255_pct,0.0
+clahe,clahe_clip_3.0,dark5_pct,0.0
+clahe,clahe_clip_4.0,mean,123.3
+clahe,clahe_clip_4.0,std,41.4
+clahe,clahe_clip_4.0,min,36
+clahe,clahe_clip_4.0,max,227
+clahe,clahe_clip_4.0,p2,71
+clahe,clahe_clip_4.0,p98,203
+clahe,clahe_clip_4.0,sat255_pct,0.0
+clahe,clahe_clip_4.0,dark5_pct,0.0
+filter,original_gray,psnr_vs_clean,22.4
+filter,original_gray,laplacian_var,8051.6
+filter,original_gray,std,73.5
+filter,gaussian_3,psnr_vs_clean,28.8
+filter,gaussian_3,laplacian_var,272.8
+filter,gaussian_3,std,70.4
+filter,gaussian_7,psnr_vs_clean,27.2
+filter,gaussian_7,laplacian_var,30.5
+filter,gaussian_7,std,69.0
+filter,median_3,psnr_vs_clean,30.7
+filter,median_3,laplacian_var,481.4
+filter,median_3,std,71.4
+filter,median_7,psnr_vs_clean,26.5
+filter,median_7,laplacian_var,157.9
+filter,median_7,std,70.5
+filter,bilateral,psnr_vs_clean,26.1
+filter,bilateral,laplacian_var,1738.9
+filter,bilateral,std,70.0
+filter,clean_reference,psnr_vs_clean,
+filter,clean_reference,laplacian_var,509.6
+filter,clean_reference,std,71.8
+sharpen,reference,laplacian_var,509.9
+sharpen,reference,psnr_vs_reference,
+sharpen,reference,std,71.8
+sharpen,blurred,laplacian_var,24.0
+sharpen,blurred,psnr_vs_reference,27.9
+sharpen,blurred,std,69.7
+sharpen,sharpened,laplacian_var,81.6
+sharpen,sharpened,psnr_vs_reference,30.9
+sharpen,sharpened,std,71.1
+threshold,input_gray,mean,111.2
+threshold,input_gray,std,25.2
+threshold,input_gray,min,80
+threshold,input_gray,max,162
+threshold,input_gray,p2,88
+threshold,input_gray,p98,151
+threshold,input_gray,sat255_pct,0.0
+threshold,input_gray,dark5_pct,0.0
+threshold,fixed_80,white_pct,0.0
+threshold,fixed_80,components,1
+threshold,fixed_80,big_components(>=1%),0
+threshold,fixed_80,tiny_components(<0.1%),1
+threshold,fixed_120,white_pct,65.4
+threshold,fixed_120,components,2
+threshold,fixed_120,big_components(>=1%),1
+threshold,fixed_120,tiny_components(<0.1%),0
+threshold,fixed_160,white_pct,100.0
+threshold,fixed_160,components,1
+threshold,fixed_160,big_components(>=1%),1
+threshold,fixed_160,tiny_components(<0.1%),0
+threshold,otsu,value,118.0
+threshold,otsu,white_pct,64.9
+threshold,otsu,components,5
+threshold,otsu,big_components(>=1%),1
+threshold,otsu,tiny_components(<0.1%),2
+compare,original,otsu_value,118.0
+compare,original,gray_std,25.2
+compare,original,white_pct,64.9
+compare,original,components,5
+compare,original,big_components(>=1%),1
+compare,original,tiny_components(<0.1%),2
+compare,gaussian_5x5,otsu_value,118.0
+compare,gaussian_5x5,gray_std,24.7
+compare,gaussian_5x5,white_pct,64.8
+compare,gaussian_5x5,components,5
+compare,gaussian_5x5,big_components(>=1%),1
+compare,gaussian_5x5,tiny_components(<0.1%),2
+compare,clahe_2.0_8x8,otsu_value,132.0
+compare,clahe_2.0_8x8,gray_std,34.1
+compare,clahe_2.0_8x8,white_pct,64.6
+compare,clahe_2.0_8x8,components,15
+compare,clahe_2.0_8x8,big_components(>=1%),1
+compare,clahe_2.0_8x8,tiny_components(<0.1%),12
+challenge,,shape,"[897, 943, 3]"
+challenge,gray,mean,124.1
+challenge,gray,std,19.0
+challenge,gray,min,27
+challenge,gray,max,176
+challenge,gray,p2,70
+challenge,gray,p98,153
+challenge,gray,sat255_pct,0.0
+challenge,gray,dark5_pct,0.0
+challenge,,otsu_value,111.0
+challenge,,white_pct,82.5
+challenge,,components,584
+challenge,,big_components(>=1%),1
+challenge,,tiny_components(<0.1%),583
+challenge,,result_equals_original,True
+challenge_variants,none,otsu,111.0
+challenge_variants,none,white_pct,82.5
+challenge_variants,none,components,584
+challenge_variants,none,tiny,583
+challenge_variants,none,cap_white,1.0
+challenge_variants,none,wall_white,1.0
+challenge_variants,none,separation,0.0
+challenge_variants,G3 + CLAHE2.0,otsu,124.0
+challenge_variants,G3 + CLAHE2.0,white_pct,65.7
+challenge_variants,G3 + CLAHE2.0,components,903
+challenge_variants,G3 + CLAHE2.0,tiny,900
+challenge_variants,G3 + CLAHE2.0,cap_white,0.41
+challenge_variants,G3 + CLAHE2.0,wall_white,1.0
+challenge_variants,G3 + CLAHE2.0,separation,0.59
+challenge_variants,G3 + CLAHE3.0,otsu,130.0
+challenge_variants,G3 + CLAHE3.0,white_pct,53.3
+challenge_variants,G3 + CLAHE3.0,components,1229
+challenge_variants,G3 + CLAHE3.0,tiny,1223
+challenge_variants,G3 + CLAHE3.0,cap_white,0.15
+challenge_variants,G3 + CLAHE3.0,wall_white,0.97
+challenge_variants,G3 + CLAHE3.0,separation,0.82
+challenge_variants,G5 + CLAHE2.0,otsu,124.0
+challenge_variants,G5 + CLAHE2.0,white_pct,65.7
+challenge_variants,G5 + CLAHE2.0,components,413
+challenge_variants,G5 + CLAHE2.0,tiny,410
+challenge_variants,G5 + CLAHE2.0,cap_white,0.41
+challenge_variants,G5 + CLAHE2.0,wall_white,1.0
+challenge_variants,G5 + CLAHE2.0,separation,0.59
+challenge_variants,G5 + CLAHE3.0,otsu,129.0
+challenge_variants,G5 + CLAHE3.0,white_pct,55.2
+challenge_variants,G5 + CLAHE3.0,components,556
+challenge_variants,G5 + CLAHE3.0,tiny,549
+challenge_variants,G5 + CLAHE3.0,cap_white,0.18
+challenge_variants,G5 + CLAHE3.0,wall_white,0.98
+challenge_variants,G5 + CLAHE3.0,separation,0.8
+challenge_variants,G7 + CLAHE2.0,otsu,124.0
+challenge_variants,G7 + CLAHE2.0,white_pct,65.8
+challenge_variants,G7 + CLAHE2.0,components,161
+challenge_variants,G7 + CLAHE2.0,tiny,158
+challenge_variants,G7 + CLAHE2.0,cap_white,0.4
+challenge_variants,G7 + CLAHE2.0,wall_white,1.0
+challenge_variants,G7 + CLAHE2.0,separation,0.6
+challenge_variants,G7 + CLAHE3.0,otsu,129.0
+challenge_variants,G7 + CLAHE3.0,white_pct,55.3
+challenge_variants,G7 + CLAHE3.0,components,214
+challenge_variants,G7 + CLAHE3.0,tiny,207
+challenge_variants,G7 + CLAHE3.0,cap_white,0.18
+challenge_variants,G7 + CLAHE3.0,wall_white,0.99
+challenge_variants,G7 + CLAHE3.0,separation,0.81
+challenge_variants,17.py result,otsu,124.0
+challenge_variants,17.py result,white_pct,65.7
+challenge_variants,17.py result,components,533
+challenge_variants,17.py result,tiny,530
+challenge_variants,17.py result,cap_white,0.41
+challenge_variants,17.py result,wall_white,1.0
+challenge_variants,17.py result,separation,0.59
