@@ -1,0 +1,75 @@
+======================================================================
+File: 0637145699424_side.png
+Actual: 0637145699424
+Expected: 0637145699424
+OCR: 0637145699424
+Format OK: True
+Expected Match: True
+OCR Exact: True
+Predicted: OK
+Actual Status: OK
+Inspection Correct: True
+Reasons: []
+======================================================================
+File: 0639873538899_side.png
+Actual: 0639873538899
+Expected: 0639873538899
+OCR: 0639873538899
+Format OK: True
+Expected Match: True
+OCR Exact: True
+Predicted: OK
+Actual Status: OK
+Inspection Correct: True
+Reasons: []
+======================================================================
+File: 0679256889404_side.png
+Actual: 0679256889404
+Expected: 0679256889400
+OCR: 0679256889404
+Format OK: True
+Expected Match: False
+OCR Exact: True
+Predicted: NG
+Actual Status: NG
+Inspection Correct: True
+Reasons: ['NG_EXPECTED_MISMATCH']
+======================================================================
+File: 0702739449714_side.png
+Actual: 0702739449714
+Expected: 0702739449714
+OCR: 0702739449714
+Format OK: True
+Expected Match: True
+OCR Exact: True
+Predicted: OK
+Actual Status: OK
+Inspection Correct: True
+Reasons: []
+======================================================================
+File: 0716954573504_side.png
+Actual: 0716954573504
+Expected: 0716954573500
+OCR: 0716954573504
+Format OK: True
+Expected Match: False
+OCR Exact: True
+Predicted: NG
+Actual Status: NG
+Inspection Correct: True
+Reasons: ['NG_EXPECTED_MISMATCH']
+======================================================================
+File: 0793387694868_side.png
+Actual: 0793387694868
+Expected: 0793387694868
+OCR: 0793387694868
+Format OK: True
+Expected Match: True
+OCR Exact: True
+Predicted: OK
+Actual Status: OK
+Inspection Correct: True
+Reasons: []
+
+Saved: /home/user1/ai_vision/subject9_machinevision/reports/day06_ocr_results.csv
+Day06 Batch OCR Complete

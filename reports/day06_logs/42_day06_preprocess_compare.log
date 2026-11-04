@@ -1,0 +1,9 @@
+Saved: /home/user1/ai_vision/subject9_machinevision/outputs/day06/preprocess/01_original.jpg
+Saved: /home/user1/ai_vision/subject9_machinevision/outputs/day06/preprocess/02_gray.jpg
+Saved: /home/user1/ai_vision/subject9_machinevision/outputs/day06/preprocess/03_clahe.jpg
+Saved: /home/user1/ai_vision/subject9_machinevision/outputs/day06/preprocess/04_otsu.jpg
+Saved: /home/user1/ai_vision/subject9_machinevision/outputs/day06/preprocess/05_clahe_otsu.jpg
+
+Reference: 0637145699424_side.png
+ROI: [434, 294, 529, 318]
+Preprocess Compare Complete

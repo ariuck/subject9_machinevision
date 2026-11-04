@@ -1,0 +1,33 @@
+============================================================
+Pipeline: original
+Expected: 0637145699424
+Raw OCR: '0637145699424\n'
+OCR Text: 0637145699424
+Exact Match: True
+============================================================
+Pipeline: gray
+Expected: 0637145699424
+Raw OCR: '0637145699424\n'
+OCR Text: 0637145699424
+Exact Match: True
+============================================================
+Pipeline: clahe
+Expected: 0637145699424
+Raw OCR: '0637145699424\n'
+OCR Text: 0637145699424
+Exact Match: True
+============================================================
+Pipeline: otsu
+Expected: 0637145699424
+Raw OCR: '0637245697424\n'
+OCR Text: 0637245697424
+Exact Match: False
+============================================================
+Pipeline: clahe_otsu
+Expected: 0637145699424
+Raw OCR: '0637245670424\n'
+OCR Text: 0637245670424
+Exact Match: False
+
+Saved: /home/user1/ai_vision/subject9_machinevision/reports/day06_preprocess_compare.csv
+OCR Compare Complete

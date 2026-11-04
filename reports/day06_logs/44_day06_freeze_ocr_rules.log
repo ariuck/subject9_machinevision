@@ -1,0 +1,8 @@
+Day06 OCR Rule Freeze
+Version: day06-ocr-v1.0
+Preprocess: original
+PSM: 7
+Whitelist: 0123456789
+Pattern: ^[0-9]{13}$
+Context Correction: False
+Saved: /home/user1/ai_vision/subject9_machinevision/configs/day06_ocr_rules.json
