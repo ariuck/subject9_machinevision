@@ -1,0 +1,2 @@
+Support count results: [{'support_count': 1, 'samples': 20, 'accuracy': 0.7, 'TP': 5, 'TN': 9, 'FP': 1, 'FN': 5}, {'support_count': 3, 'samples': 20, 'accuracy': 0.8, 'TP': 6, 'TN': 10, 'FP': 0, 'FN': 4}, {'support_count': 5, 'samples': 20, 'accuracy': 0.9, 'TP': 8, 'TN': 10, 'FP': 0, 'FN': 2}]
+Generated contamination: 5

@@ -1,0 +1,8 @@
+======================================================================
+DAY08 FEW-SHOT PROTOTYPE
+======================================================================
+Normal Support  : 5
+Anomaly Support : 5
+Anomaly Type    : broken_small
+Saved Artifact  : artifacts\day08\fewshot_prototypes.npz
+Saved Config    : configs\day08_fewshot_config.json

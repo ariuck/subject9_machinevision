@@ -1,0 +1,51 @@
+{
+  "started_at": "2026-11-03T01:11:33.618577+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "status": "complete",
+  "steps": [
+    {
+      "script": "62_day08_check_lowdata_env.py",
+      "returncode": 0
+    },
+    {
+      "script": "63_day08_prepare_dataset.py",
+      "returncode": 0
+    },
+    {
+      "script": "64_day08_calibrate_one_shot.py",
+      "returncode": 0
+    },
+    {
+      "script": "65_day08_test_one_shot.py",
+      "returncode": 0
+    },
+    {
+      "script": "66_day08_build_fewshot_prototypes.py",
+      "returncode": 0
+    },
+    {
+      "script": "67_day08_test_fewshot.py",
+      "returncode": 0
+    },
+    {
+      "script": "68_day08_compare_methods.py",
+      "returncode": 0
+    },
+    {
+      "script": "69_day08_make_cutpaste_defects.py",
+      "returncode": 0
+    },
+    {
+      "script": "70_day08_mini_challenge.py",
+      "returncode": 0
+    }
+  ],
+  "frozen_files_sha256": {
+    "configs/day08_one_shot_rules.json": "cabd9e2df57d6c92e2a538db04cddb61bee1a54dda0910550cffbc23d0739a4b",
+    "artifacts/day08/one_shot_reference.npy": "e1544adbe6683ca6e824f57ddde1e394a2733bf1ff46d26584df2d9cd72907f8",
+    "configs/day08_fewshot_config.json": "ab21e601f7f4ce4aa7cc74246a5b5224b0dfaa5bc7c62688b958c49e5173bb95",
+    "artifacts/day08/fewshot_prototypes.npz": "133838e73d38cf2553073bcaf12f38b03a803499e956127472965a3c924d347e"
+  },
+  "finished_at": "2026-11-03T01:12:09.645175+00:00"
+}

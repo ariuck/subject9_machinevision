@@ -1,0 +1,25 @@
+======================================================================
+DAY08 FEW-SHOT TEST
+======================================================================
+normal/000.png actual= Normal predicted= Normal normal_sim= 0.990692138671875 anomaly_sim= 0.9846254587173462 correct= True
+normal/001.png actual= Normal predicted= Normal normal_sim= 0.9930588006973267 anomaly_sim= 0.9868433475494385 correct= True
+normal/002.png actual= Normal predicted= Normal normal_sim= 0.9908028244972229 anomaly_sim= 0.9874202013015747 correct= True
+normal/003.png actual= Normal predicted= Normal normal_sim= 0.9923413395881653 anomaly_sim= 0.9852968454360962 correct= True
+normal/004.png actual= Normal predicted= Normal normal_sim= 0.9903761148452759 anomaly_sim= 0.9839775562286377 correct= True
+normal/005.png actual= Normal predicted= Normal normal_sim= 0.9932969808578491 anomaly_sim= 0.9835322499275208 correct= True
+normal/006.png actual= Normal predicted= Normal normal_sim= 0.9683425426483154 anomaly_sim= 0.963871955871582 correct= True
+normal/007.png actual= Normal predicted= Normal normal_sim= 0.9920527935028076 anomaly_sim= 0.9835082292556763 correct= True
+normal/008.png actual= Normal predicted= Normal normal_sim= 0.989669919013977 anomaly_sim= 0.9800922870635986 correct= True
+normal/009.png actual= Normal predicted= Normal normal_sim= 0.991449236869812 anomaly_sim= 0.9854241609573364 correct= True
+anomaly/broken_small/000.png actual= Anomaly predicted= Normal normal_sim= 0.9883580207824707 anomaly_sim= 0.981072723865509 correct= False
+anomaly/broken_small/005.png actual= Anomaly predicted= Anomaly normal_sim= 0.9633894562721252 anomaly_sim= 0.9684045314788818 correct= True
+anomaly/broken_small/006.png actual= Anomaly predicted= Anomaly normal_sim= 0.9751050472259521 anomaly_sim= 0.978736400604248 correct= True
+anomaly/broken_small/007.png actual= Anomaly predicted= Normal normal_sim= 0.9875441789627075 anomaly_sim= 0.9874441027641296 correct= False
+anomaly/broken_small/008.png actual= Anomaly predicted= Anomaly normal_sim= 0.9710315465927124 anomaly_sim= 0.9773173332214355 correct= True
+anomaly/broken_small/012.png actual= Anomaly predicted= Anomaly normal_sim= 0.9573407173156738 anomaly_sim= 0.967504620552063 correct= True
+anomaly/broken_small/015.png actual= Anomaly predicted= Anomaly normal_sim= 0.9774532318115234 anomaly_sim= 0.9825469255447388 correct= True
+anomaly/broken_small/016.png actual= Anomaly predicted= Anomaly normal_sim= 0.9862141609191895 anomaly_sim= 0.9866554737091064 correct= True
+anomaly/broken_small/020.png actual= Anomaly predicted= Anomaly normal_sim= 0.9774197936058044 anomaly_sim= 0.9806687831878662 correct= True
+anomaly/broken_small/021.png actual= Anomaly predicted= Anomaly normal_sim= 0.9824549555778503 anomaly_sim= 0.9830942153930664 correct= True
+
+Saved: reports\day08_fewshot_results.csv

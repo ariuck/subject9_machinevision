@@ -1,0 +1,20 @@
+{
+  "result": "passed",
+  "checks": [
+    "9 scripts exit 0; 14 Python sources parse",
+    "Exact source roles and masks copied without modification; no role overlap",
+    "Same 20 labeled Common Query images for both methods",
+    "Calibration-only threshold and frozen model files unchanged through Test/Challenge",
+    "512D finite unit reference/prototypes",
+    "Metrics recomputed from predictions",
+    "Support 1/3/5 uses same Query; 5 matches baseline",
+    "25 synthetic images reproduced pixel-for-pixel from seeds; metadata and bounds match; outside paste unchanged"
+  ],
+  "environment": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "note": "Windows CPU verification using local copy. WSL execution not verified due to session access restriction."
+  }
+}

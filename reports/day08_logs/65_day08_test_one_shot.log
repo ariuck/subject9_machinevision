@@ -1,0 +1,27 @@
+======================================================================
+DAY08 ONE-SHOT TEST
+======================================================================
+Threshold: 0.9821099311113357
+
+normal/000.png actual= Normal predicted= Normal similarity= 0.9920583367347717 correct= True
+normal/001.png actual= Normal predicted= Normal similarity= 0.9915763139724731 correct= True
+normal/002.png actual= Normal predicted= Normal similarity= 0.9832068681716919 correct= True
+normal/003.png actual= Normal predicted= Normal similarity= 0.9905376434326172 correct= True
+normal/004.png actual= Normal predicted= Normal similarity= 0.991309642791748 correct= True
+normal/005.png actual= Normal predicted= Normal similarity= 0.9869007468223572 correct= True
+normal/006.png actual= Normal predicted= Anomaly similarity= 0.9592045545578003 correct= False
+normal/007.png actual= Normal predicted= Normal similarity= 0.9833765029907227 correct= True
+normal/008.png actual= Normal predicted= Normal similarity= 0.9874482154846191 correct= True
+normal/009.png actual= Normal predicted= Normal similarity= 0.9875773191452026 correct= True
+anomaly/broken_small/000.png actual= Anomaly predicted= Anomaly similarity= 0.9796942472457886 correct= True
+anomaly/broken_small/005.png actual= Anomaly predicted= Anomaly similarity= 0.9565271139144897 correct= True
+anomaly/broken_small/006.png actual= Anomaly predicted= Anomaly similarity= 0.9678870439529419 correct= True
+anomaly/broken_small/007.png actual= Anomaly predicted= Normal similarity= 0.9849473834037781 correct= False
+anomaly/broken_small/008.png actual= Anomaly predicted= Anomaly similarity= 0.9647561311721802 correct= True
+anomaly/broken_small/012.png actual= Anomaly predicted= Anomaly similarity= 0.9604966640472412 correct= True
+anomaly/broken_small/015.png actual= Anomaly predicted= Anomaly similarity= 0.9748755693435669 correct= True
+anomaly/broken_small/016.png actual= Anomaly predicted= Normal similarity= 0.9829005599021912 correct= False
+anomaly/broken_small/020.png actual= Anomaly predicted= Anomaly similarity= 0.9764906167984009 correct= True
+anomaly/broken_small/021.png actual= Anomaly predicted= Anomaly similarity= 0.978174090385437 correct= True
+
+Saved: reports\day08_one_shot_results.csv

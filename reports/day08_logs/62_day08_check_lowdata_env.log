@@ -1,0 +1,25 @@
+======================================================================
+DAY08 LOW-DATA ENV CHECK
+======================================================================
+Torch      : 2.15.0+cpu
+Torchvision: 0.29.2+cpu
+OpenCV     : 5.0.0
+NumPy      : 2.5.4
+Pandas     : 3.0.1
+Pillow     : 13.0.0
+CUDA       : False
+
+Dataset    : samples\day07\original\bottle
+[OK] samples\day07\original\bottle\train\good
+[OK] samples\day07\original\bottle\test\good
+[OK] samples\day07\original\bottle\test\broken_small
+[OK] samples\day07\original\bottle\test\contamination
+[OK] samples\day07\original\bottle\ground_truth\broken_small
+[OK] samples\day07\original\bottle\ground_truth\contamination
+
+train_good     : 209
+test_good      : 20
+broken_small   : 22
+contamination  : 21
+
+Day08 Environment OK

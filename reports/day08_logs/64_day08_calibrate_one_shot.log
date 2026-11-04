@@ -1,0 +1,11 @@
+======================================================================
+DAY08 ONE-SHOT CALIBRATION
+======================================================================
+Reference          : 037.png
+Calibration Images : 20
+Similarity Min     : 0.979989
+Similarity Mean    : 0.987526
+Similarity Max     : 0.992425
+5 Percentile       : 0.9821099311113357
+Rule               : similarity >= threshold => Normal
+Saved Rule         : configs\day08_one_shot_rules.json

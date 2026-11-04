@@ -1,0 +1,19 @@
+======================================================================
+DAY08 METHOD COMPARISON
+======================================================================
+
+Method            : one_shot
+Samples           : 20
+Accuracy          : 0.8500
+Anomaly Precision : 0.8889
+Anomaly Recall    : 0.8000
+TP / TN / FP / FN : 8 9 1 2
+
+Method            : few_shot
+Samples           : 20
+Accuracy          : 0.9000
+Anomaly Precision : 1.0000
+Anomaly Recall    : 0.8000
+TP / TN / FP / FN : 8 10 0 2
+
+Saved: reports\day08_method_comparison.csv

@@ -1,0 +1,7 @@
+======================================================================
+DAY08 CUT-PASTE DEFECT GENERATION
+======================================================================
+Defect Type      : broken_small
+Generated Images : 20
+Output           : outputs\day08\cutpaste\generated
+Metadata         : reports\day08_defect_metadata.csv

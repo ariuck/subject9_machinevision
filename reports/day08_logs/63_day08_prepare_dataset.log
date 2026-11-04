@@ -1,0 +1,14 @@
+======================================================================
+DAY08 DATASET PREPARE
+======================================================================
+One-shot Reference        : 1
+One-shot Calibration      : 20
+Few-shot Normal Support   : 5
+Few-shot Anomaly Support  : 5
+Common Query Normal       : 10
+Common Query Anomaly      : 10
+Cut-Paste Normal          : 10
+Cut-Paste Defect Source   : 2
+Mini Defect Source        : 2
+Data Leakage Check        : PASS
+Saved                     : reports\day08_dataset_summary.md
