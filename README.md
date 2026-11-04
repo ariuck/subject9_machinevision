@@ -297,3 +297,227 @@ Calibration 데이터로 판정 기준을 결정하고,
 
 Test 결과에서는 Accuracy뿐 아니라 FP와 FN을 확인했고,
 FP 3건의 공통 NG Reason을 분석하여 현재 Baseline의 한계를 확인했다.
+
+---
+
+## Day 06 — OCR 기반 제조 문자 검사
+
+### 검사 대상
+
+제품에 인쇄된 13자리 SN
+
+Mini Challenge:
+Ch.-B. 제품 코드
+
+### 사용 기술
+
+- OpenCV ROI
+- Gray / CLAHE / Otsu 비교
+- Tesseract OCR
+- pytesseract
+- PSM
+- Whitelist
+- Text Cleaning
+- Regex
+- Expected SN 비교
+- Deskew
+
+### 최종 OCR Rule
+
+Version: day06-ocr-v1.0
+
+Preprocess: original
+
+PSM: 7
+
+Whitelist: 0123456789
+
+Pattern: ^[0-9]{13}$
+
+### 전처리 비교 (대표 이미지 1장)
+
+- Original / Gray / CLAHE: 정확히 읽음
+- Otsu: `0637245697424` (오인식), CLAHE+Otsu: `0637245670424` (오인식)
+
+### Batch 검사 결과
+
+검사 이미지: 6장
+
+OCR Exact Accuracy: 100% (6 / 6)
+
+Inspection Accuracy: 100% (6 / 6)
+
+Format OK: 6 / 6, Expected Match: 4 / 6 (교육용 NG 2장은 Expected SN을 다르게 설정)
+
+OCR Failure: 없음
+
+Inspection Failure: 없음
+
+### 환경 변화 테스트
+
+Low Contrast: 성공
+
+Blur: 실패
+
+Tilt: 실패
+
+Tilt + Deskew: 실패
+
+Glare: 실패
+
+### Mini Challenge
+
+검사 대상: Ch.-B.
+
+OCR 성공:
+3장 (NA679903-8A, KW156489-8R, ER935556-3V)
+
+OCR 실패:
+1장 (TI776224-2D → OCR `TI776224-20`). Gray / CLAHE / Otsu로 다시 시도했지만 개선되지 않았다.
+
+실제 Ch.-B. 값과 ROI는 에이전트가 이미지를 확대해 확인한 값이다. 사람이 원본 이미지로 직접 확인한다.
+
+### 실행
+
+```bash
+source .venv/bin/activate
+python src/40_day06_check_ocr_env.py
+python src/41_day06_select_text_roi.py   # 마우스로 SN ROI 선택 (GUI 필요)
+python src/42_day06_preprocess_compare.py
+...
+python src/49_day06_mini_challenge.py     # 마우스 ROI 선택 + Ch.-B. 값 입력
+```
+
+Tesseract 엔진은 `requirements.txt`로 설치되지 않는다. 교재는 `sudo apt install tesseract-ocr tesseract-ocr-eng`를 쓴다.
+이 프로젝트에서는 sudo 없이 Ubuntu 공식 패키지를 `~/.local/tesseract-root`에 풀고 `.venv/bin/tesseract` 래퍼로 연결했다 (Tesseract 5.5.0, eng / osd).
+`source .venv/bin/activate` 후에는 `tesseract --version`이 동작한다. 시스템에 직접 설치했다면 래퍼는 필요 없다.
+41번과 49번은 마우스 선택이 필요하다. 이번 실행에서는 스크립트 본문을 수정하지 않고 사람의 입력만 대체했다.
+41번은 교재 14.1절에 기록된 ROI 좌표를, 49번은 이미지를 확대해 확인한 ROI와 Ch.-B. 값을 사용했다.
+
+### 주요 결과 파일
+
+- configs/day06_ocr_rules.json, configs/day06_labels.csv
+- reports/day06_ocr_environment.txt
+- reports/day06_preprocess_compare.csv
+- reports/day06_ocr_results.csv
+- reports/day06_ocr_metrics.md
+- reports/day06_challenge_results.csv
+- reports/day06_failure_analysis.md
+- reports/day06_mini_challenge_results.csv
+- reports/day06_mini_challenge.md
+- reports/day06_logs/
+- 이미지: outputs/day06/roi, preprocess, batch, challenge, mini_challenge
+
+### 오늘 확인한 핵심
+
+제품 이미지에서 필요한 문자 영역을 ROI로 선택하고,
+OCR로 읽은 문자열을 형식과 Expected Value로 검사하여
+OK / NG 판정으로 연결했습니다.
+
+또한 OCR이 정확하게 문자를 읽는 것과
+제품 자체가 정상인 것은 서로 다른 문제라는 것을 확인했습니다.
+
+---
+
+## Day 07 — Anomaly Detection
+
+### Dataset / Baseline
+
+- MVTec AD bottle: Normal Train 167 / Validation 42 / Test Normal 20 / Anomaly 63
+- Split seed: 42. 원본 보존, Train / Validation 중복 없음.
+- ImageNet 사전학습 ResNet18 layer3, 정상 Train 특징 평균, Euclidean distance
+- 전처리: 짧은 변 256 Resize → 224 Center Crop → ImageNet Normalize
+- Rule: day07-anomaly-v1.0, 정상 Validation 95 Percentile, Threshold 0.067457
+- Test와 Challenge는 동일 Frozen Rule 사용. 교재 예시 수치를 복사하지 않고 실제 실행 결과를 기록했다.
+
+### Test Result
+
+- Accuracy: 0.9277, Precision: 0.9672, Recall: 0.9365
+- TP 59 / TN 18 / FP 2 / FN 4
+
+### Challenge
+
+- normal_blur.png: PASS (Score 0.065158)
+- normal_bright.png: FP (Score 0.104316)
+- normal_dark.png: FP (Score 0.123439)
+- normal_rotation.png: PASS (Score 0.054645)
+- normal_shift.png: FP (Score 0.076077)
+
+### 실행과 결과
+
+```bash
+source .venv/bin/activate
+python src/day07_run_all.py
+```
+
+개별 실습은 `src/50_day07_check_anomaly_env.py`부터 `src/61_day07_mini_challenge.py`까지 번호 순서로 실행한다.
+전체 재실행은 7일차 생성 데이터와 결과를 다시 만든다. `samples/day07/original/bottle`은 유지한다.
+Mini Challenge는 `61`번 파일의 Dark / Blur / Rotation 값을 바꾸어 재실행할 수 있다.
+
+- Rule: `configs/day07_anomaly_rules.json`
+- Split 기록: `reports/day07_dataset_split.json`
+- Test: `reports/day07_anomaly_scores.csv`, `reports/day07_test_metrics.md`
+- Challenge: `reports/day07_challenge_results.csv`
+- Mini Challenge: `reports/day07_mini_challenge.md`
+- 실패 분석: `reports/day07_failure_analysis.md`
+- 실행 환경·상태: `reports/day07_run_status.json`, `reports/day07_logs/`
+- 이미지: `outputs/day07/fp`, `outputs/day07/fn`, `outputs/day07/heatmap`
+
+정상 기준 → Validation Threshold → Rule Freeze → Test → 환경 변화 실험 흐름을 구현했다.
+작은 결함과 촬영 조건에 대한 한계는 실패 분석에 기록했다. 개념 이해와 개인 예상·육안 분석은 학생이 직접 확인한다.
+검증은 Windows CPU에서 동일 코드·데이터의 로컬 복사본으로 수행하고 결과를 프로젝트에 반영했다. 이후 WSL(Ubuntu)에서 프로젝트 복사본으로 `day07_run_all.py`를 전체 재실행해 정상 완료와 동일한 판정 결과를 확인했다(점수 최대 오차 약 2e-5, Threshold 0.067457 → 0.067458). 상세 환경은 reports/day07_verification.json에 기록했다.
+
+---
+
+## Day 08 — Low-Data Inspection
+
+### 데이터와 Baseline
+
+- MVTec bottle 원본 재사용, Seed 42, 역할 간 중복 방지
+- One-shot: 정상 Reference 1장 + 별도 정상 Calibration 20장
+- Few-shot: Normal 5장 + broken_small 5장 Support
+- 동일 Common Query: Normal 10장 + broken_small 10장
+- ImageNet ResNet18 Average Pool 512차원, L2 Normalize, Cosine Similarity
+- One-shot Threshold: 0.982109931 (정상 Calibration 5 Percentile)
+- Zero-shot은 개념만 정리한다. One-shot / Few-shot은 사전학습 특징을 활용하며 모델 재학습은 하지 않았다.
+
+### 실제 비교 결과
+
+| Method | Accuracy | Precision | Recall | TP | TN | FP | FN |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| one_shot | 0.8500 | 0.8889 | 0.8000 | 8 | 9 | 1 | 2 |
+| few_shot | 0.9000 | 1.0000 | 0.8000 | 8 | 10 | 0 | 2 |
+
+### Defect Generation / Mini Challenge
+
+- Ground Truth Mask + Cut-Paste: broken_small 합성 20장, Metadata 저장
+- Support 1 / 3 / 5장 실험, 같은 Query 사용
+- contamination 합성 5장: Scale 0.6~1.0, Rotation ±10°
+- 시각 품질 검수는 보고서에서 확인. 합성이 실제 성능을 개선했다는 결론은 내리지 않았다.
+
+### 실행
+
+```bash
+source .venv/bin/activate
+python src/day08_run_all.py
+```
+
+`62~69`번은 교재 본 실습, `70`번은 Mini Challenge다. 전체 재실행은 8일차 생성 데이터와 결과를 다시 만든다.
+7일차 원본과 결과는 유지한다. 7일차의 특징 추출·평가 구성이 달라 정확도를 단순 순위로 비교하지 않는다.
+
+### 결과 파일
+
+- `reports/day08_dataset_summary.md`, `reports/day08_dataset_split.json`
+- `configs/day08_one_shot_rules.json`, `configs/day08_fewshot_config.json`
+- `artifacts/day08/one_shot_reference.npy`, `artifacts/day08/fewshot_prototypes.npz`
+- `reports/day08_one_shot_results.csv`, `reports/day08_fewshot_results.csv`
+- `reports/day08_method_comparison.csv`, `reports/day08_method_analysis.md`
+- `reports/day08_defect_metadata.csv`, `reports/day08_contamination_metadata.csv`
+- `reports/day08_synthetic_quality_check.md`, `reports/day08_mini_challenge.md`
+- `reports/day08_support_count_comparison.csv`
+- `outputs/day08/cutpaste/generated/`, `outputs/day08/mini_challenge/generated/`
+- `reports/day08_run_status.json`, `reports/day08_logs/`, `reports/day08_verification.json`
+
+개인 사전 예상·개념 이해와 학생 본인의 해석은 직접 확인한다. Git Commit / Push는 수행하지 않았다.
+
+8일차 검증은 Windows CPU의 동일 코드·데이터 복사본에서 수행했다. 이후 WSL(Ubuntu)에서 프로젝트 복사본으로 `day08_run_all.py`를 전체 재실행해 정상 완료와 동일한 판정 결과를 확인했다(점수 최대 오차 약 2e-5, Similarity Threshold 0.982110 → 0.982105). 상세 환경은 reports/day08_verification.json에 기록했다.

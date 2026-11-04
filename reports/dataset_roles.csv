@@ -1,0 +1,6 @@
+folder,role,when_used
+calibration,검사 기준을 정하기 위한 데이터,정상 범위·Threshold 등을 결정할 때
+train,AI 모델을 학습하기 위한 데이터,AI 모델을 사용하는 경우
+validation,학습·설정 중간 비교,AI 모델이나 설정을 비교할 때
+test,확정된 방법의 최종 확인,기준을 정한 뒤 성능을 확인할 때
+challenge,일부러 어려운 조건의 데이터,실패 조건을 찾아볼 때
