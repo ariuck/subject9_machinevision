@@ -112,3 +112,5 @@ wcwidth==0.9.3
 webcolors==25.10.0
 webencodings==0.6.1
 websocket-client==1.9.2
+torch==2.15.0
+torchvision==0.29.2

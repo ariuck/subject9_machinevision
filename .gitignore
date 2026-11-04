@@ -34,3 +34,9 @@ Thumbs.db
 
 # 환경설정
 .env
+
+# Day07 generated normal reference
+artifacts/day07/
+
+# Day08 generated features
+artifacts/day08/
