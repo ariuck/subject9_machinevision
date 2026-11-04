@@ -1,0 +1,14 @@
+======================================================================
+Validation Score Summary
+======================================================================
+Count: 42
+Min  : 0.035909
+Mean : 0.05068
+Max  : 0.070809
+
+ percentile  threshold  validation_normal_over_threshold
+         90   0.065359                                 5
+         95   0.067457                                 3
+         99   0.069536                                 1
+
+Saved: reports\day07_threshold_compare.csv

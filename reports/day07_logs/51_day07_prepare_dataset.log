@@ -1,0 +1,9 @@
+======================================================================
+DAY07 DATASET PREPARED
+======================================================================
+Normal Train      : 167
+Normal Validation : 42
+Normal Test       : 20
+broken_large      : 20
+broken_small      : 22
+contamination     : 21

@@ -1,0 +1,9 @@
+======================================================================
+DAY07 MINI CHALLENGE
+======================================================================
+Source   : samples\day07\test\normal\001.png
+Threshold: 0.067457
+
+mini_blur.png score= 0.054978 predicted= Normal result= PASS
+mini_dark.png score= 0.099735 predicted= Anomaly result= FP
+mini_rotation.png score= 0.047913 predicted= Normal result= PASS

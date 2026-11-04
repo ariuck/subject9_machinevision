@@ -1,0 +1,26 @@
+======================================================================
+DAY07 ANOMALY ENV CHECK
+======================================================================
+Torch      : 2.15.0+cpu
+Torchvision: 0.29.2+cpu
+OpenCV     : 5.0.0
+NumPy      : 2.5.4
+CUDA       : False
+
+Dataset: samples\day07\original\bottle
+[OK] samples\day07\original\bottle\train\good
+[OK] samples\day07\original\bottle\test\good
+[OK] samples\day07\original\bottle\test\broken_large
+[OK] samples\day07\original\bottle\test\broken_small
+[OK] samples\day07\original\bottle\test\contamination
+[OK] samples\day07\original\bottle\ground_truth\broken_large
+[OK] samples\day07\original\bottle\ground_truth\broken_small
+[OK] samples\day07\original\bottle\ground_truth\contamination
+
+Train Good        : 209
+Test Good         : 20
+Broken Large      : 20
+Broken Small      : 22
+Contamination     : 21
+
+Day07 Environment OK

@@ -1,0 +1,8 @@
+======================================================================
+DAY07 RULE FREEZE
+======================================================================
+Version   : day07-anomaly-v1.0
+Percentile: 95
+Threshold : 0.067457
+Rule      : score > threshold => Anomaly
+Saved     : configs\day07_anomaly_rules.json

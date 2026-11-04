@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "12 steps exit 0",
+    "16 Python sources parse",
+    "167/42 split complete and disjoint",
+    "209 copied train/validation images match originals byte-for-byte",
+    "reference shape, finite values, unit vector",
+    "threshold from validation only",
+    "83 unique Test records, 5 Challenge and 3 Mini records",
+    "consistent frozen thresholds and decisions",
+    "FP/FN counts match images",
+    "8 heatmap overlays and 6 masks"
+  ],
+  "result": "passed",
+  "verification_environment": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "note": "Windows CPU verification against a local copy of the exact project/data. WSL command execution was denied; WSL Python was not executed."
+  },
+  "frozen_files_sha256": {
+    "configs/day07_anomaly_rules.json": "fbe7eab1e7fa5aedcacab4e1c25a47e9cc345faab54554c61b13aea90e10843d",
+    "artifacts/day07/normal_reference.npz": "be2597876ef3fd80de92f80447fa4cdcfecb70425fea24f927711d9e2e0aa7f5"
+  }
+}

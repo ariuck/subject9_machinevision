@@ -1,0 +1,4 @@
+﻿file,value,prediction,anomaly_score,threshold,predicted,result
+mini_blur.png,9,PASS,0.05497793108224869,0.067457,Normal,PASS
+mini_dark.png,0.7,FP,0.09973534196615219,0.067457,Anomaly,FP
+mini_rotation.png,12.0,FP,0.04791337624192238,0.067457,Normal,PASS

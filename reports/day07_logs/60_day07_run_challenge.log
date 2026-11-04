@@ -1,0 +1,11 @@
+======================================================================
+DAY07 CHALLENGE
+======================================================================
+Threshold: 0.067457
+normal_blur.png score= 0.065158 predicted= Normal result= PASS
+normal_bright.png score= 0.104316 predicted= Anomaly result= FP
+normal_dark.png score= 0.123439 predicted= Anomaly result= FP
+normal_rotation.png score= 0.054645 predicted= Normal result= PASS
+normal_shift.png score= 0.076077 predicted= Anomaly result= FP
+
+Saved: reports\day07_challenge_results.csv

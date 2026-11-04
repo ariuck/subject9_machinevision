@@ -1,0 +1,20 @@
+======================================================================
+DAY07 TEST EVALUATION
+======================================================================
+Total    : 83
+TP       : 59
+TN       : 18
+FP       : 2
+FN       : 4
+Accuracy : 0.9277
+Precision: 0.9672
+Recall   : 0.9365
+
+defect_type
+broken_large     1.000000
+broken_small     0.818182
+contamination    1.000000
+good             0.900000
+Name: correct, dtype: float64
+
+Report: reports\day07_test_metrics.md
